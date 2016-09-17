@@ -2,6 +2,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+function createMap(elementId, latitude, longitude, zoom) {
+	var position = new google.maps.LatLng(latitude, longitude);
+
+	var mapCanvas = document.getElementById(elementId);
+	var mapOptions = {
+		center: position,
+		zoom: zoom,
+		scrollwheel: false,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(mapCanvas, mapOptions);
+
+	var marker = new google.maps.Marker({position: position});
+	marker.setMap(map);
+
+	return map;
+}
+</script>
+
+
 <title>Lek. med. Aleskander Piszczulin</title>
 </head>
 <body>
@@ -35,14 +58,24 @@
 	<h3>Opole</h3>
 	<p>ul. Rodziewiczówny 6, 45-384 Opole, tel. 77 454 20 73</p>
 	<p>rejestracja (wtorek 12:00 - 19:00, piątek 13:00 - 19:00, sobota 9:00 - 13:00)</p>
+	<div id="mapaOpole" style="width:500px;height:250px"></div>
 	</div>
 
 	<div>
 	<h3>Wrocław</h3>
 	<p>ul. Buforowa 16/10, 52-131 Wrocław, tel. 71 342 45 00, kom. +48 533 643 222</p>
 	<p>rejestracja (poniedziałek 12:00 - 17:00, środa 10:00 - 14:00, czwartek 12:00 - 17:00)</p>
+	<div id="mapaWroclaw" style="width:500px;height:250px"></div>
 	</div>
 
+	<script>
+	function initializeMaps() {
+		createMap("mapaOpole", 50.661485, 17.944927, 15);
+		createMap("mapaWroclaw", 51.065061, 17.055375, 14);
+	}
+
+	google.maps.event.addDomListener(window, 'load', initializeMaps);
+	</script>
 </div>
 
 <!-- współpraca -->
