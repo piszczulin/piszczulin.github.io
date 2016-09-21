@@ -1,1 +1,169 @@
-Strona w przygotowaniu...
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+function createMap(elementId, latitude, longitude, zoom) {
+	var position = new google.maps.LatLng(latitude, longitude);
+
+	var mapCanvas = document.getElementById(elementId);
+	var mapOptions = {
+		center: position,
+		zoom: zoom,
+		scrollwheel: false,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(mapCanvas, mapOptions);
+
+	var marker = new google.maps.Marker({position: position});
+	marker.setMap(map);
+
+	return map;
+}
+</script>
+
+<style>
+p.indent {
+    text-indent: 3%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.jumbotron {
+    background-color: #f4511e; /* Orange */
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+.big-icon {
+    color: #f4511e; /* Orange */
+    font-size: 18px;
+}
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e; /* Orange */
+}
+
+</style>
+
+<title>Lek. med. Aleskander Piszczulin</title>
+</head>
+<body>
+
+<!-- wizytówka -->
+<div class="jumbotron text-center">
+<h1>Lek. med. Piszczulin Aleskander</h1>
+<p>Homeopata - Irydolog - Okulista</p>
+<a href="#top">
+	<img src="images/lekarz.jpg" class="img-circle" alt="Zdjęcie">
+</a>
+</div>
+
+<!-- irydologia opis -->
+<div class="container-fluid bg-grey">
+<h2 class="text-center">Co to jest irydologia?</h2>
+<p class="indent">Irydologia jest naukowym kierunkiem w medycynie, który łączy w sobie problemy irydodiagnostyki, irydolofografii, irydorefleksoterapii, irydoterapii, chomeoterapii oraz irydogenetyki.</p>
+<p class="indent">Irys, to z greckiego tęczówka Diagnosis - rozpoznanie chorób. Zatem irydodiagnostyka jest metodą diagnostyczną, która pozwala na całościową ocenę stanu zdrowia i dzięki takiemu spojrzeniu na pacjenta pomaga znaleźć przyczyny choroby. Zmiany chorobowe na tęczówce oka występują o wiele wcześniej niż odczuwanie przez pacjenta objawy. Każda choroba ma swój przebieg: od stanu bezobjawowego, przez stan rozwiniętych objawów chorobowych, stan inwazji, kiedy to pacjent odczuwa już dolegliwości, okres ustąpienia objawów chorobowych oraz okres rekonwalescencji. Dzięki temu na tęczówce można rozpoznać chorobowy stan ostry, stan podostry, przewlekły i destrukcyjny. Na podstawie analizy obydwu tęczówek można ocenić konstytucję danej tęczówki, umiejscowienie źrenic, ich konfigurację. Można również rozpoznać, które z narządów i układów zostały objęte procesem chorobowym. Bardzo korzystna dla procesu leczenia jest możliwość oceny skuteczności zastosowanej metody leczenia. Można ustalić z powodu jakiej substancji chemicznej nastąpiły zmiany w organiźmie, czy jakimi lekami chemicznymi zatruty jest pacjent.</p>
+</div>
+
+<!-- homeopatia opis -->
+<div class="container-fluid bg-grey">
+<h2 class="text-center">Co to jest homeopatia?</h2>
+<p class="indent">Homeopatia jest to skuteczna metoda łagodnego i bezpiecznego leczenia prawie wszystkich dolegliwości dających objawy chorobowe. Celem homeopatii jest uzdrowienie człowieka przez wzmocnienie jego osłabionej siły witalnej, która jest niezbędna do uwolnienia go od czynników chorobotwórczych oraz przywrócenia harmonijnego funkcjonowania całego organizmu. Homeopatia oddziałuje na cały organizm, a nie tylko na wybrane jego części. Leczenie homeopatyczne uwzględnia zdolność chorego organizmu do reagowania na lek. Dla każdego wieku (od dzieciństwa do późnej starości) dobiera się, odpowiadający określonemu typowi konstytucji, specyfik homeopatyczny. Każdy pacjent inaczej przechodzi tę samą chorobę, dlatego otrzymuje swój indywidualnie dobrany lek. Jego fizjologia i patologia procesów, może być do siebie zbliżone, ale zawsze pozostaną wyjątkowe i niepowtarzalne dla pacjentów. Takie całościowe i zindywidualizowane podejście daje szansę na wyleczenie w krótkim czasie zarówno lekkich, jak i ciężkich chronicznych stanów chorobowych.</p>
+<p class="indent">Środki stosowane przez klasyczną medycynę działają doraźnie i nie usuwają przyczyn choroby. Stosowanie antybiotyków najczęściej mija się z celem, jest bezskuteczne, a nawet może być szkodliwe, ponieważ osłabia układ immunologiczny pacjenta, co sprzyja powstawaniu chorób uczuleniowych czy reakcji alergicznych. Grozi też powstaniem antybiotykoodpornych szczepów bakterii. Leczenie antybiotykowe jest uzasadnione dopiero przy ciężkiej, zaawansowanej infekcji bakteryjnej, gdy organizm nie jest już zdolny do stworzenia mechanizmów samoobrony. W tym wypadku warto połączyć metody klasyczne z homeopatia, gdyż w czasie kiedy antybiotyk zwalcza drobnoustroje, homeopat wzmacnia podporność organizmu.</p>
+<p class="indent">Leki homeopatyczne mają postać granulek lub mikrogranulek. Umieszcza się je pod językiem i trzyma aż do ich rozpuszczenia. Można też je rozpuścić w łyżeczce wody i przyjmować wg. zaleceń lekarza.</p>
+</div>
+
+<!-- ośrodek -->
+<div class="container-fluid bg-grey">
+<h2 class="text-center">Ośrodek medycyny naturalnej "IRYS"</h2>
+<div class="text-center"><img class="text-center" src="images/logo_irys.png" alt="Logo IRYS"></div>
+	<div class="container-fluid">
+		<div class="row"><br><br></div>
+
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-1">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="text-center">Opole</h3>
+						<p><span class="glyphicon glyphicon-map-marker big-icon"></span> ul. Marii Rodziewiczówny 6, 45-348 Opole</p>
+						<p><span class="glyphicon glyphicon-phone-alt big-icon"></span> 77 454 20 73</p>
+						<p><span class="glyphicon glyphicon-calendar big-icon"></span> rejestracja</p> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-center"><b>wtorek 12:00 - 17:00</b></div>
+					<div class="col-sm-12 text-center"><b>piątek 12:00 - 17:00</b></div>
+					<div class="col-sm-12 text-center"><b>sobota 9:00 - 13:00</b></div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div id="mapaOpole" style="width:100%;height:300px"></div>
+			</div>
+		</div>
+
+		<div class="row"><br><hr><br></div>
+
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-1">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="text-center">Wrocław</h3>
+						<p><span class="glyphicon glyphicon-map-marker big-icon"></span> ul. Buforowa 16/10, 52-131 Wrocław</p>
+						<p><span class="glyphicon glyphicon-phone-alt big-icon"></span> 71 342 45 00</p>
+						<p><span class="glyphicon glyphicon-calendar big-icon"></span> rejestracja</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-center"><b>poniedziałek 12:00 - 17:00</b></div>
+					<div class="col-sm-12 text-center"><b>środa 10:00 - 13:30</b></div>
+					<div class="col-sm-12 text-center"><b>czwartek 12:00 - 17:00</b></div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div id="mapaWroclaw" style="width:100%;height:300px"></div>
+			</div>
+		</div>
+
+		<div class="row"><br><br></div>
+	</div>
+
+	<script>
+	function initializeMaps() {
+		createMap("mapaOpole", 50.661485, 17.944927, 15);
+		createMap("mapaWroclaw", 51.065061, 17.055375, 14);
+	}
+
+	google.maps.event.addDomListener(window, 'load', initializeMaps);
+	</script>
+</div>
+
+<!-- współpraca -->
+<div class="container-fluid bg-grey">
+<h2 class="text-center">Współpraca</h2>
+<h3><a href="http://pthk.pl" title="PTHK"><img src="http://new.pthk.pl/wp-content/uploads/logo-pthk.png" alt="Logo PTHK" title="PTHK" /><span style="display: none;">PTHK</span></a> Polskie Towarzystwo Homeopatii Klinicznej (<a href="http://www.pthk.pl">www.pthk.pl</a>)</h3>
+<p>Od 2008 do 2016 członek zarządu Polskiego Towarzystwa Homeopatii Klinicznej oraz wykładowca. Kontakt <a href="mailto:aleksander.piszczulin@pthk.pl"> aleksander.piszczulin@pthk.pl</a>.</p>
+</div>
+
+<footer class="container-fluid text-center bg-grey">
+	<a href="#top" title="W górę">
+		<span class="glyphicon glyphicon-chevron-up"></span><br>
+	</a>
+</footer>
+
+</body>
+</html>
